@@ -1,6 +1,6 @@
 <template>
-    <div class="container fle">
-        <nav class="Navbar d-flex justify-content-between">
+    <div class="container">
+        <nav class="Navbar d-flex justify-content-between align-items-center">
             <div>
                 <img src="/dc-logo.png" alt="" srcset="">
             </div>
