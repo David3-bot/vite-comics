@@ -1,26 +1,28 @@
 <template>
-    <div class="container jumbotron-2">
+    <div class="jumbotron-2">
 
     </div>
 
-    <div class="container bg-black p-5">
-        <div class="row">
-            <div class="col-2" v-for="fumetto in listaFumetti">
-                <div class="card ratio ratio-1x1" style="width: 8rem ;">
-                    <img :src="fumetto.thumb" class="" alt="">
+    <div class="bg-black py-5">
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-2" v-for="fumetto in listaFumetti">
+                    <div class="card m-0">
+                        <img :src="fumetto.thumb" class="m-0" alt="">
 
+                    </div>
+                    <div class="card-body">
+                        <span class="card-title text-white">{{ fumetto.series }}</span>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <p class="card-title text-white">{{ fumetto.series }}</p>
-                </div>
+
             </div>
-
         </div>
     </div>
 
 
 
-    <div class="bg-primary p-5 d-flex align-items-center gap-3">
+    <div class="bg-primary p-5 d-flex align-items-center gap-3 justify-content-center">
 
         <div class="card-icon d-flex align-items-center gap-3" v-for="icona in banners">
             <img :src="icona.icon" alt="" srcset="">
@@ -109,14 +111,19 @@ export default {
 
 }
 
-.img {
-    width: 30px;
-    height: 30px;
+img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: top;
 }
 
 .card-icon {
     width: fit-content;
-    img {width: 35px ;}
+
+    img {
+        width: 35px;
+    }
 }
 
 .jumbotron-2 {

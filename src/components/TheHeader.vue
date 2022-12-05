@@ -1,6 +1,6 @@
 <template>
-    <div class="container">
-        <nav class="Navbar d-flex justify-content-between align-items-center">
+    <div class="">
+        <nav class="Navbar d-flex justify-content-between align-items-center py-3">
             <div>
                 <img src="/dc-logo.png" alt="" srcset="">
             </div>

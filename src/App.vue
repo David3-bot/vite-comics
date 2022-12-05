@@ -4,29 +4,29 @@ import TheMain from "./components/TheMain.vue"
 import TheFooter from "./components/TheFooter.vue"
 
 export default {
-  components: { TheHeader, TheMain, TheFooter},
+  components: { TheHeader, TheMain, TheFooter },
 
   data() {
-        return {
+    return {
 
-        };
-    },
-    methods: {},
+    };
+  },
+  methods: {},
 
-    beforeMount() {},
+  beforeMount() { },
 }
 </script>
 
 
 <template>
-  <div class="container">
-    <TheHeader></TheHeader>
-    <TheMain></TheMain>
-    <TheFooter></TheFooter>
-  </div>
+
+  <TheHeader></TheHeader>
+  <TheMain></TheMain>
+  <TheFooter></TheFooter>
+
 
 </template>
 
 <style lang="scss">
-    @use "./styles/general.scss";
+@use "./styles/general.scss";
 </style>
