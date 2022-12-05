@@ -1,6 +1,6 @@
 <template>
-    <div class="container-fluid jumbotron-2">
-    
+    <div class="container jumbotron-2">
+
     </div>
 
     <div class="container bg-black p-5">
@@ -20,13 +20,14 @@
 
 
 
-    <div class="bg-primary d-flex justify-content-around p-5">
-        <div class="card-icon"><img src="/buy-comics-digital-comics.png" alt="" srcset=""></div>
-        <div class="card-icon"><img src="/buy-comics-digital-comics.png" alt="" srcset=""></div>
-        <div class="card-icon"><img src="/buy-comics-digital-comics.png" alt="" srcset=""></div>
-        <div class="card-icon"><img src="/buy-comics-digital-comics.png" alt="" srcset=""></div>
-        <div class="card-icon"><img src="/buy-comics-digital-comics.png" alt="" srcset=""></div>
-        <div class="card-icon"><img src="/buy-comics-digital-comics.png" alt="" srcset=""></div>
+    <div class="bg-primary p-5 d-flex align-items-center gap-3">
+
+        <div class="card-icon d-flex align-items-center gap-3" v-for="icona in banners">
+            <img :src="icona.icon" alt="" srcset="">
+            <small class="text-white">{{ icona.name }}</small>
+
+        </div>
+
     </div>
     <section class="jumbotron">
 
@@ -75,10 +76,12 @@
 
 <script>
 import { dcHeroes } from "../../src/composaples/array";
+import { itemsBanners } from "../composaples/arrayIcons";
 export default {
     data() {
         return {
-            listaFumetti: dcHeroes
+            listaFumetti: dcHeroes,
+            banners: itemsBanners,
         }
     },
 }
@@ -86,7 +89,7 @@ export default {
 
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .container-fluid {
     background-color: black;
 }
@@ -97,8 +100,7 @@ export default {
 
 .jumbotron {
     background-image: url(/footer-bg.jpg);
-    padding-top: 300px;
-    padding-right: 300px;
+    height: 400px;
     background-repeat: no-repeat;
     background-position: center top;
     width: 100%;
@@ -109,16 +111,20 @@ export default {
 
 .img {
     width: 30px;
+    height: 30px;
 }
 
 .card-icon {
     width: fit-content;
+    img {width: 35px ;}
 }
 
 .jumbotron-2 {
     background-image: url(/jumbotron.jpg);
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
     width: 100%;
+    height: 300px;
 }
 </style>

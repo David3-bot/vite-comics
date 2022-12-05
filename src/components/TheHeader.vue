@@ -7,16 +7,7 @@
 
             <div class="">
                 <ul class="d-flex">
-                    <li class="p-2"><a href="1">1</a></li>
-                    <li class="p-2"><a href="1">1</a></li>
-                    <li class="p-2"><a href="1">1</a></li>
-                    <li class="p-2"><a href="1">1</a></li>
-                    <li class="p-2"><a href="1">1</a></li>
-                    <li class="p-2"><a href="1">1</a></li>
-                    <li class="p-2"><a href="1">1</a></li>
-                    <li class="p-2"><a href="1">1</a></li>
-                    <li class="p-2"><a href="1">1</a></li>
-                    <li class="p-2"><a href="1">1</a></li>
+                    <li class="p-2" v-for="pippo in listaBottoni"><a href="">{{pippo}}</a></li>
                 </ul>
             </div>
 
@@ -24,7 +15,18 @@
     </div>
 </template>
 
-<script></script>
+<script>
+import { navBarItems } from "../../src/composaples/arraynav";
+export default {
+    data() {
+        return {
+            listaBottoni: navBarItems
+        }
+    },
+}
+
+
+</script>
 
 <style scoped>
 .navbar {
